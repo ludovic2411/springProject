@@ -1,0 +1,26 @@
+package com.example.demo.dal.entities;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.OneToOne;
+import javax.validation.constraints.Size;
+
+@Entity
+public class Ville {
+	
+	@Id
+	@Column(nullable=false)
+	private String cp;
+	
+	@Column(nullable=false)
+	private String nom;
+	
+	@Column(nullable=false)
+	@Size(min=3,max=3)
+	@OneToOne
+	@JoinColumn(name="pays")
+	private Pays pays;
+}
