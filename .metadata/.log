@@ -2049,3 +2049,36 @@ Binding(CTRL+SHIFT+T,
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-09 09:31:47.717
 !MESSAGE executing callback sts4.classpath.pgbKiMgy SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-09 14:54:11.924
+!MESSAGE Preparing classpath changed notification demo
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-09 14:54:11.925
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-09 14:54:11.926
+!MESSAGE classpath=64 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-09 14:54:11.927
+!MESSAGE executing callback sts4.classpath.pgbKiMgy demo false 64
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-09 14:54:11.936
+!MESSAGE executing callback sts4.classpath.pgbKiMgy SUCCESS [done]
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2019-05-09 14:54:13.223
+!MESSAGE Failed to dispatch repository event to org.eclipse.m2e.core.internal.embedder.EclipseRepositoryListener: null
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-09 14:54:14.271
+!MESSAGE Preparing classpath changed notification demo
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-09 14:54:14.272
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-09 14:54:14.274
+!MESSAGE classpath=64 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-09 14:54:14.275
+!MESSAGE executing callback sts4.classpath.pgbKiMgy demo false 64
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-09 14:54:14.292
+!MESSAGE executing callback sts4.classpath.pgbKiMgy SUCCESS [done]
