@@ -1,0 +1,9 @@
+package com.example.demo.dal.repositories;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.example.demo.dal.entities.Entreprise;
+
+public interface EntreprisesRepo extends JpaRepository<Entreprise, Long> {
+
+}

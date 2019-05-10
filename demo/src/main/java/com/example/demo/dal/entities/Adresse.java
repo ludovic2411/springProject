@@ -9,26 +9,17 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.validation.constraints.Size;
 
-@Entity(name="adresses")
 public class Adresse {
 	
-	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
 	
-	@Column(nullable=false)
-	@OneToOne
-	@JoinColumn(name="cp")
 	private Ville ville;
 	
-	@Column(nullable=false)
-	@Size(max=255)
 	private String rue;
 	
-	@Column(nullable=false)
 	private String numero;
 
-	public Adresse(int id, Ville ville, @Size(max = 255) String rue, String numero) {
+	public Adresse(int id, Ville ville, String rue, String numero) {
 		super();
 		this.id = id;
 		this.ville = ville;

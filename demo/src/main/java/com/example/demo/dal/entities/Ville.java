@@ -8,23 +8,15 @@ import javax.persistence.JoinTable;
 import javax.persistence.OneToOne;
 import javax.validation.constraints.Size;
 
-@Entity
 public class Ville {
 	
-	@Id
-	@Column(nullable=false)
 	private String cp;
 	
-	@Column(nullable=false)
 	private String nom;
 	
-	@Column(nullable=false)
-	@Size(min=3,max=3)
-	@OneToOne
-	@JoinColumn(name="pays")
 	private Pays pays;
 
-	public Ville(String cp, String nom, @Size(min = 3, max = 3) Pays pays) {
+	public Ville(String cp, String nom,Pays pays) {
 		super();
 		this.cp = cp;
 		this.nom = nom;

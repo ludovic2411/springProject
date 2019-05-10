@@ -1,26 +1,25 @@
 package com.example.demo.controller;
 
-import javax.management.Query;
+import java.util.List;
 
-import org.hibernate.Session;
-import org.hibernate.query.NativeQuery;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.dal.entities.Entreprise;
+import com.example.demo.services.EntreprisesService;
 
 @RestController
 @RequestMapping("/entreprises")
 public class EntreprisesController {
 	
+	@Autowired
+	private EntreprisesService service;
+	
 	@GetMapping("")
-	public static Entreprise findAll() {
-		
-		NativeQuery query= Session.createSQLQuery(
-				"SELECT e.nom,e.site_web,e.mail, a.cp, a.rue,a.numero,v.nom  "
-				+ "FROM entreprises AS e INNER JOIN adresses AS a ON e.adresse=a.id "
-				+ "INNER JOIN villes AS v on a.cp=v.cp");
+	public List <Entreprise> findAll() {
+		return service.findAll();
 				
 	}
 }

@@ -11,25 +11,19 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
-@Entity(name="netreprises")
+
 public class Entreprise {
-	@Id
-	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	
 	private int id;
 	
-	@Column(nullable=false)
 	private String nom;
 	
-	@OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
 	private List<Adresse> adresses=new ArrayList<>();
 	
-	@Column(nullable=false)
 	private String site_web;
 	
-	@Column
 	private int telephone;
 	
-	@Column
 	private String mail;
 
 	public Entreprise(int id, String nom, List<Adresse> adresses, String site_web, int telephone, String mail) {
