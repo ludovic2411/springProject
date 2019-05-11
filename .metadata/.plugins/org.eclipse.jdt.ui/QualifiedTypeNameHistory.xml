@@ -24,10 +24,15 @@
     <fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
     <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.Query"/>
     <fullyQualifiedTypeName name="com.example.demo.dal.entities.Entreprise"/>
-    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
-    <fullyQualifiedTypeName name="com.example.demo.services.EntreprisesService"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
     <fullyQualifiedTypeName name="com.example.demo.dal.repositories.EntreprisesRepo"/>
+    <fullyQualifiedTypeName name="com.example.demo.repositories.EntreprisesRepo"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="com.example.demo.entities.Entreprise"/>
+    <fullyQualifiedTypeName name="com.example.demo.services.EntreprisesService"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
     <fullyQualifiedTypeName name="org.springframework.context.annotation.ComponentScan"/>
+    <fullyQualifiedTypeName name="com.example.demo.entities.Pays"/>
+    <fullyQualifiedTypeName name="javax.persistence.PersistenceContext"/>
 </qualifiedTypeNameHistroy>
