@@ -1,6 +1,7 @@
 package com.example.demo.controllers;
 
 import com.example.demo.entities.Entreprise;
+import com.example.demo.entities.EntrepriseDetail;
 import com.example.demo.entities.Pays;
 import com.example.demo.services.EntreprisesService;
 
@@ -18,7 +19,7 @@ public class EntreprisesController {
 	private EntreprisesService service;
 	
 	@GetMapping
-	public List<Object[]> findAll(){
+	public List<EntrepriseDetail> findAll(){
 		return service.findAll();
 	}
 

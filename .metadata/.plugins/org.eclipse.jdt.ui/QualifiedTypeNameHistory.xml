@@ -35,4 +35,5 @@
     <fullyQualifiedTypeName name="org.springframework.context.annotation.ComponentScan"/>
     <fullyQualifiedTypeName name="com.example.demo.entities.Pays"/>
     <fullyQualifiedTypeName name="javax.persistence.PersistenceContext"/>
+    <fullyQualifiedTypeName name="com.example.demo.entities.EntrepriseDetail"/>
 </qualifiedTypeNameHistroy>

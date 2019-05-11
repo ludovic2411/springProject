@@ -4138,3 +4138,231 @@ Binding(CTRL+SHIFT+T,
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-10 17:03:10.524
 !MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.QDpIzYjn => OK
+!SESSION 2019-05-11 20:10:43.284 -----------------------------------------------
+eclipse.buildId=4.2.1.201904170946-RELEASE
+java.version=11.0.2
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=fr_BE
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY org.eclipse.egit.core 1 0 2019-05-11 20:10:53.808
+!MESSAGE Using Apache MINA sshd as ssh client.
+
+!ENTRY org.eclipse.jface 2 0 2019-05-11 20:10:55.992
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-05-11 20:10:55.993
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@61c145cb,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@153409b8,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-11 20:11:09.134
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-11 20:11:09.135
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@42599b84[org.springframework.tooling.boot.ls:1.6.0.201904170912(id=528)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-11 20:11:09.192
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-11 20:11:09.901
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-11 20:11:18.719
+!MESSAGE Boot LS startup time from start to initialized: 9415ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-11 20:11:18.844
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.sUWSzpaw
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-11 20:11:18.845
+!MESSAGE subscribing to classpath changes: sts4.classpath.sUWSzpaw
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-11 20:11:18.880
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-11 20:11:18.880
+!MESSAGE subsribers = [sts4.classpath.sUWSzpaw]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-11 20:11:18.881
+!MESSAGE Sending initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-11 20:11:18.884
+!MESSAGE project demo ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-11 20:11:18.885
+!MESSAGE Sending initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-11 20:11:18.885
+!MESSAGE Preparing classpath changed notification demo
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-11 20:11:18.885
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.sUWSzpaw => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-11 20:11:18.885
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-11 20:11:18.889
+!MESSAGE classpath=92 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-11 20:11:18.890
+!MESSAGE executing callback sts4.classpath.sUWSzpaw demo false 92
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-11 20:11:18.927
+!MESSAGE executing callback sts4.classpath.sUWSzpaw SUCCESS [done]
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2019-05-11 20:42:55.884
+!MESSAGE Connection to http://marketplace.eclipse.org/content/darkest-dark-theme-devstyle/success?client=org.eclipse.epp.mpc.core&client.version=1.7.5.v20190225-1757&os=linux&ws=gtk&nl=fr_BE&java.version=11.0.2&product=org.springframework.boot.ide.branding.sts4&product.version=4.2.1.201904170946-RELEASE&runtime.version=3.15.200.v20190301-1641&platform.version=4.11.0.v20190307-0500 failed on marketplace.eclipse.org. Retry attempt 0 started
+!STACK 0
+java.net.UnknownHostException: marketplace.eclipse.org
+	at java.base/java.net.InetAddress$CachedAddresses.get(InetAddress.java:797)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1505)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1364)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1298)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:263)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:162)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:610)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:445)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-11 20:43:07.365
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.sUWSzpaw
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-11 20:43:07.366
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.sUWSzpaw
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-11 20:43:07.366
+!MESSAGE subsribers = null
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-11 20:43:07.367
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.sUWSzpaw => OK
+!SESSION 2019-05-11 20:43:10.426 -----------------------------------------------
+eclipse.buildId=4.2.1.201904170946-RELEASE
+java.version=11.0.2
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=fr_BE
+Framework arguments:  -product org.springframework.boot.ide.branding.sts4
+Command-line arguments:  -data file:/home/ludovic/Bureau/octocat/JavaTest/WorkingFolder/ -os linux -ws gtk -arch x86_64 -product org.springframework.boot.ide.branding.sts4
+
+!ENTRY org.eclipse.ui 2 0 2019-05-11 20:43:51.024
+!MESSAGE Warnings while parsing the images from the 'org.eclipse.ui.commandImages' extension point.
+!SUBENTRY 1 org.eclipse.ui 2 0 2019-05-11 20:43:51.024
+!MESSAGE Cannot bind to an undefined command: plug-in='com.genuitec.eclipse.theming.ui', id='com.genuitec.myeclipse.help.darktheme.commandid'
+
+!ENTRY org.eclipse.egit.core 1 0 2019-05-11 20:43:51.184
+!MESSAGE Using Apache MINA sshd as ssh client.
+
+!ENTRY com.genuitec.eclipse.theming.ui 1 0 2019-05-11 20:43:51.959
+!MESSAGE A DevStyle Theme is being activated on this workspace; preparing colors and configuration
+
+!ENTRY com.genuitec.eclipse.theming.ui 1 0 2019-05-11 20:43:51.969
+!MESSAGE DevStyle has archived current color configurations to alternate preferences - will be restored when switching out of the DevStyle Theme
+
+!ENTRY org.eclipse.jface 2 0 2019-05-11 20:43:52.420
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-05-11 20:43:52.420
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@40273969,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5ec25b61,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-11 20:43:57.402
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-11 20:43:57.403
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@75254b84[org.springframework.tooling.boot.ls:1.6.0.201904170912(id=528)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-11 20:43:57.404
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-11 20:43:57.497
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-11 20:44:01.262
+!MESSAGE Boot LS startup time from start to initialized: 3850ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-11 20:44:01.299
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.GjRYWuSH
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-11 20:44:01.300
+!MESSAGE subscribing to classpath changes: sts4.classpath.GjRYWuSH
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-11 20:44:01.301
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-11 20:44:01.302
+!MESSAGE subsribers = [sts4.classpath.GjRYWuSH]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-11 20:44:01.302
+!MESSAGE Sending initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-11 20:44:01.306
+!MESSAGE project demo ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-11 20:44:01.308
+!MESSAGE Sending initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-11 20:44:01.308
+!MESSAGE Preparing classpath changed notification demo
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-11 20:44:01.308
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.GjRYWuSH => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-11 20:44:01.309
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-11 20:44:01.313
+!MESSAGE classpath=92 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-11 20:44:01.314
+!MESSAGE executing callback sts4.classpath.GjRYWuSH demo false 92
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-11 20:44:01.397
+!MESSAGE executing callback sts4.classpath.GjRYWuSH SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-11 21:31:21.632
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.GjRYWuSH
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-11 21:31:21.665
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.GjRYWuSH
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-11 21:31:21.665
+!MESSAGE subsribers = null
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-11 21:31:21.666
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.GjRYWuSH => OK
