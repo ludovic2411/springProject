@@ -1,14 +1,11 @@
 package com.example.demo.controllers;
 
-import com.example.demo.entities.base.Entreprise;
-import com.example.demo.entities.base.Pays;
 import com.example.demo.entities.queries.EntrepriseDetail;
+import com.example.demo.entities.queries.EntrepriseTechnologie;
 import com.example.demo.services.EntreprisesService;
 
 import org.springframework.web.bind.annotation.*;
 import org.springframework.beans.factory.annotation.Autowired;
-import javax.inject.*;
-
 import java.util.List;
 
 @RestController
@@ -20,7 +17,12 @@ public class EntreprisesController {
 	
 	@GetMapping
 	public List<EntrepriseDetail> findAll(){
-		return service.findAll();
+		return service.getAll();
+	}
+	
+	@GetMapping("/technologie")
+	public List<EntrepriseTechnologie> getByTechnologie(){
+		return service.getByTechnologie();
 	}
 
 }
