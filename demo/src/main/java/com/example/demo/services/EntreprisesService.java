@@ -1,13 +1,9 @@
 package com.example.demo.services;
 
-import com.example.demo.repositories.EntreprisesRepo;
-import com.example.demo.entities.Entreprise;
-import com.example.demo.entities.EntrepriseDetail;
-import com.example.demo.entities.Pays;
+
+import com.example.demo.entities.queries.EntrepriseDetail;
 
 import org.springframework.stereotype.Service;
-import org.springframework.beans.factory.annotation.Autowired;
-import javax.inject.*;
 import javax.persistence.Query;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -17,8 +13,6 @@ import java.util.*;
 @Service
 public class EntreprisesService {
 	
-	//@Autowired
-	//private EntreprisesRepo repo;
 	@PersistenceContext
 	private EntityManager entityManager;
 	
