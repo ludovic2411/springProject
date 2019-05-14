@@ -4553,3 +4553,70 @@ Caused by: org.eclipse.lsp4j.jsonrpc.ResponseErrorException: Internal error.
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:834)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-14 15:49:10.158
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.zfwlqYns
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-14 15:49:10.159
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.zfwlqYns
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-14 15:49:10.159
+!MESSAGE subsribers = null
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-14 15:49:10.160
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.zfwlqYns => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-14 15:49:16.076
+!MESSAGE Boot LS startup time from start to initialized: 3459ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-14 15:49:16.215
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.pEcsJhwr
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-14 15:49:16.235
+!MESSAGE subscribing to classpath changes: sts4.classpath.pEcsJhwr
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-14 15:49:16.235
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-14 15:49:16.235
+!MESSAGE subsribers = [sts4.classpath.pEcsJhwr]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-14 15:49:16.235
+!MESSAGE Sending initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-14 15:49:16.236
+!MESSAGE project demo ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-14 15:49:16.236
+!MESSAGE Sending initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-14 15:49:16.236
+!MESSAGE Preparing classpath changed notification demo
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-14 15:49:16.236
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.pEcsJhwr => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-14 15:49:16.237
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-14 15:49:16.311
+!MESSAGE classpath=92 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-14 15:49:16.311
+!MESSAGE executing callback sts4.classpath.pEcsJhwr demo false 92
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-14 15:49:16.395
+!MESSAGE executing callback sts4.classpath.pEcsJhwr SUCCESS [done]
+
+!ENTRY org.eclipse.lsp4e 4 0 2019-05-14 15:52:46.866
+!MESSAGE 
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1886)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2021)
+	at org.eclipse.lsp4e.operations.hover.LSBasedHover.getHoverInfo(LSBasedHover.java:108)
+	at org.springframework.tooling.boot.ls.jdt.SpringBootJavaHoverProvider.getHoverInfo2(SpringBootJavaHoverProvider.java:43)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:167)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:133)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:169)

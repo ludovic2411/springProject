@@ -24,5 +24,10 @@ public class EntreprisesController {
 	public List<EntrepriseTechnologie> getByTechnologie(){
 		return service.getByTechnologie();
 	}
+	
+	@GetMapping("/{id}")
+	public Object getById(@PathVariable("id") int id){
+		return service.getById(id);
+	}
 
 }

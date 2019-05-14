@@ -9,6 +9,7 @@ import javax.persistence.Query;
 
 import org.springframework.stereotype.Service;
 
+import com.example.demo.entities.base.Personne;
 import com.example.demo.entities.queries.PersonneTechnologie;
 
 @Service
@@ -29,6 +30,14 @@ public class PersonneService {
 		}
 		
 		return personneList;
+	}
+	
+	
+	
+	public Personne create(Personne p) {
+		Personne personneToSave=p;
+		//Query query=
+		return null;
 	}
 
 }
