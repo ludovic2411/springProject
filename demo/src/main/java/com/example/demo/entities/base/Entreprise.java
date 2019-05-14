@@ -1,4 +1,4 @@
-package com.example.demo.entities;
+package com.example.demo.entities.base;
 
 public class Entreprise {
 	private int id;
@@ -7,9 +7,9 @@ public class Entreprise {
 	private String mail;
 	private String siteWeb;
 	private int telephone;
-	public Entreprise(int id, String nom, int adresse, String mail, String siteWeb, int telephone) {
+	public Entreprise( String nom, int adresse, String mail, String siteWeb, int telephone) {
 		super();
-		this.id = id;
+		//this.id = id;
 		this.nom = nom;
 		this.adresse = adresse;
 		this.mail = mail;
