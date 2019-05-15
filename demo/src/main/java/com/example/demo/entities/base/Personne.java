@@ -5,11 +5,11 @@ public class Personne {
 	private String email;
 	private String nom;
 	private String prenom;
-	private int telephone;
+	private long telephone;
 	private String pwd;
 	private boolean isRecruteur;
 	
-	public Personne(String email, String nom, String prenom, int telephone, String pwd, boolean isRecruteur) {
+	public Personne(String email, String nom, String prenom, long telephone, String pwd, boolean isRecruteur) {
 		super();
 		this.email = email;
 		this.nom = nom;
@@ -37,10 +37,10 @@ public class Personne {
 	public void setPrenom(String prenom) {
 		this.prenom = prenom;
 	}
-	public int getTelephone() {
+	public long getTelephone() {
 		return telephone;
 	}
-	public void setTelephone(int telephone) {
+	public void setTelephone(long telephone) {
 		this.telephone = telephone;
 	}
 	public String getPwd() {

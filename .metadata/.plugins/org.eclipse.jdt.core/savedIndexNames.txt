@@ -56,7 +56,6 @@ INDEX VERSION 1.131+/home/ludovic/Bureau/octocat/JavaTest/WorkingFolder/.metadat
 2510855344.index
 4171864799.index
 3386254707.index
-1924484980.index
 3240481987.index
 3412597101.index
 3102192759.index
