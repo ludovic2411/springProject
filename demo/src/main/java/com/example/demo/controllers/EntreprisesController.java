@@ -2,6 +2,7 @@ package com.example.demo.controllers;
 
 import com.example.demo.entities.queries.EntrepriseDetail;
 import com.example.demo.entities.queries.EntrepriseTechnologie;
+import com.example.demo.entities.queries.EntrepriseToInsert;
 import com.example.demo.services.EntreprisesService;
 
 import org.springframework.web.bind.annotation.*;
@@ -28,6 +29,11 @@ public class EntreprisesController {
 	@GetMapping("/{id}")
 	public Object getById(@PathVariable("id") int id){
 		return service.getById(id);
+	}
+	
+	@PostMapping
+	public EntrepriseToInsert create(EntrepriseToInsert e) {
+	return	service.create(e);
 	}
 
 }

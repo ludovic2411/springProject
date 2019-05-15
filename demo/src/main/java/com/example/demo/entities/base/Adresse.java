@@ -1,23 +1,23 @@
 package com.example.demo.entities.base;
 
 public class Adresse {
-	private int id;
+	//private int id;
 	private String cp;
 	private String rue;
 	private String numero;
-	public Adresse(int id, String cp, String rue, String numero) {
+	public Adresse( String cp, String rue, String numero) {
 		super();
-		this.id = id;
+		//this.id = id;
 		this.cp = cp;
 		this.rue = rue;
 		this.numero = numero;
 	}
-	public int getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
-	}
+//	public int getId() {
+//		return id;
+//	}
+//	public void setId(int id) {
+//		this.id = id;
+//	}
 	public String getCp() {
 		return cp;
 	}

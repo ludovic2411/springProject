@@ -1,7 +1,7 @@
 package com.example.demo.entities.base;
 
 public class Entreprise {
-	private int id;
+	//private int id;
 	private String nom;
 	private int adresse;
 	private String mail;
@@ -16,12 +16,12 @@ public class Entreprise {
 		this.siteWeb = siteWeb;
 		this.telephone = telephone;
 	}
-	public int getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
-	}
+	//public int getId() {
+	//	return id;
+	//}
+	//public void setId(int id) {
+	//	this.id = id;
+	//}
 	public String getNom() {
 		return nom;
 	}
