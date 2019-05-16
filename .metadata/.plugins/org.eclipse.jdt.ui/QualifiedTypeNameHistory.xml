@@ -49,4 +49,5 @@
     <fullyQualifiedTypeName name="javax.transaction.Transactional"/>
     <fullyQualifiedTypeName name="com.example.demo.entities.base.Adresse"/>
     <fullyQualifiedTypeName name="com.example.demo.entities.queries.EntrepriseToInsert"/>
+    <fullyQualifiedTypeName name="com.example.demo.entities.joined.RecruteurEntrepriseJoinTable"/>
 </qualifiedTypeNameHistroy>
