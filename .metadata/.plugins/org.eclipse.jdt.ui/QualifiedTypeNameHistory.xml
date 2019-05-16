@@ -41,6 +41,12 @@
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="com.example.demo.entities.queries.PersonneTechnologie"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
-    <fullyQualifiedTypeName name="com.example.demo.entities.base.Personne"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
+    <fullyQualifiedTypeName name="com.example.demo.entities.base.Personne"/>
+    <fullyQualifiedTypeName name="com.example.demo.entities.queries.EntrepriseLikee"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestBody"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
+    <fullyQualifiedTypeName name="javax.transaction.Transactional"/>
+    <fullyQualifiedTypeName name="com.example.demo.entities.base.Adresse"/>
+    <fullyQualifiedTypeName name="com.example.demo.entities.queries.EntrepriseToInsert"/>
 </qualifiedTypeNameHistroy>

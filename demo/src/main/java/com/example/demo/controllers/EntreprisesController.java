@@ -7,6 +7,8 @@ import com.example.demo.services.EntreprisesService;
 
 import org.springframework.web.bind.annotation.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
+
 import java.util.List;
 
 @RestController
@@ -32,7 +34,9 @@ public class EntreprisesController {
 	}
 	
 	@PostMapping
-	public EntrepriseToInsert create(EntrepriseToInsert e) {
+	@Transactional
+	public EntrepriseToInsert create(@RequestBody EntrepriseToInsert e) {
+		System.out.println(e.getTelephone().toString().length());
 	return	service.create(e);
 	}
 

@@ -11,11 +11,11 @@ public class EntrepriseToInsert {
 	private String nomVille;
 	private String pays;
 	private String site;
-	private long telephone;
+	private Long telephone;
 	private String mail;
 	
 	public EntrepriseToInsert(String nomEntreprise, String cp, String rue, String numero,
-			String nomVille, String pays,String site, long telephone,String mail) {
+			String nomVille, String pays,String site, Long telephone,String mail) {
 		super();
 		this.nomEntreprise = nomEntreprise;
 		this.cp = cp;
@@ -85,7 +85,7 @@ public class EntrepriseToInsert {
 		this.site = site;
 	}
 
-	public long getTelephone() {
+	public Long getTelephone() {
 		return telephone;
 	}
 

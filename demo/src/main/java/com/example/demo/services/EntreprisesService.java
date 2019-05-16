@@ -64,16 +64,13 @@ public class EntreprisesService {
 	}
 	
 	public EntrepriseToInsert create(EntrepriseToInsert e) {
+		//System.out.println(e);
 		//Calcul de l'id des adresses
 		Query query=entityManager.createNativeQuery("SELECT COUNT(*) FROM adresses");
 		long previousId=Long.parseLong(query.getSingleResult().toString());
 		//Calcul de l'id de l'entreprise
 		Query countE=entityManager.createNativeQuery("SELECT COUNT(*) FROM entreprises");
 		long previousEntId=Long.parseLong(countE.getSingleResult().toString());
-		//Insertion du pays
-		Query createPays=entityManager.createNativeQuery("INSERT INTO pays(code) VALUES(?);");
-		createPays.setParameter(1, e.getPays());
-		createPays.executeUpdate();
 		//insertion de la ville
 		Query createVille=entityManager.createNativeQuery("INSERT INTO villes(cp,nom,pays) VALUES (?,?,?);");
 		createVille.setParameter(1, e.getCp());
