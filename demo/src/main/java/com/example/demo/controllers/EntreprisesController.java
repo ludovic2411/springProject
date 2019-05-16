@@ -18,21 +18,25 @@ public class EntreprisesController {
 	@Autowired
 	private EntreprisesService service;
 	
+	//Renvoie les entreprises avec leurs détails
 	@GetMapping
 	public List<EntrepriseDetail> findAll(){
 		return service.getAll();
 	}
 	
+	//Renvoie les entreprises avec les technolgies utilisées
 	@GetMapping("/technologie")
 	public List<EntrepriseTechnologie> getByTechnologie(){
 		return service.getByTechnologie();
 	}
 	
+	//Renvoie une entreprise
 	@GetMapping("/{id}")
 	public Object getById(@PathVariable("id") int id){
 		return service.getById(id);
 	}
 	
+	//Créer une entreprise
 	@PostMapping
 	@Transactional
 	public EntrepriseToInsert create(@RequestBody EntrepriseToInsert e) {

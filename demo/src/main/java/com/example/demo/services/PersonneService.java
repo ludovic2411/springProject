@@ -10,6 +10,7 @@ import javax.persistence.Query;
 import org.springframework.stereotype.Service;
 
 import com.example.demo.entities.base.Personne;
+import com.example.demo.entities.joined.RecruteurEntrepriseJoinTable;
 import com.example.demo.entities.queries.EntrepriseLikee;
 import com.example.demo.entities.queries.PersonneTechnologie;
 
@@ -107,6 +108,29 @@ public class PersonneService {
 		query.setParameter(6, p.isRecruteur());
 		query.executeUpdate();
 		return p;
+	}
+	
+	//Insére une entreprise dans la table des entreprises likee et retourne une entreprise likee
+	public List<EntrepriseLikee> createFavorite(RecruteurEntrepriseJoinTable e,String email) {
+		//Prend l'id de la dernière entreprise ajoutée
+		Query query=manager.createNativeQuery("SELECT COUNT(*) FROM recruteur_entreprise_join_table");
+		long previousId=Long.parseLong(query.getSingleResult().toString());
+		//Insère dans la liste des favoris
+		Query insertQuery=manager.createNativeQuery("INSERT INTO recruteur_entreprise_join_table(recruteur_email,entreprise_id) VALUES(?,?);");
+		insertQuery.setParameter(1, e.getRecruteurEmail());
+		insertQuery.setParameter(2,e.getEntrepriseId());
+		insertQuery.executeUpdate();
+		//affiche l'entreprise ajoutée
+		Query displayQuery=manager.createNativeQuery("SELECT e.nom AS entreprise_likee, p.nom, p.prenom  FROM recruteur_entreprise_join_table AS j INNER JOIN entreprises AS e ON e.id=j.entreprise_id INNER JOIN personnes AS p on p.email=j.recruteur_email WHERE p.email=? AND p.is_recruteur=0;");
+		displayQuery.setParameter(1, email);
+		List<Object[]> resultSet=displayQuery.getResultList();
+		List<EntrepriseLikee> entrepriseList=new ArrayList<EntrepriseLikee>();
+		for(Object [] row:resultSet) {
+			EntrepriseLikee entreprise=new EntrepriseLikee(row[0].toString(),row[1].toString(),row[2].toString());
+			entrepriseList.add(entreprise);
+		}
+		
+		return entrepriseList;
 	}
 
 }
