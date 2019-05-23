@@ -86,12 +86,12 @@ public class PersonneService {
 	//Retourne les entreprises enregistrées par une personne
 	
 	public List<EntrepriseLikee> getFavorites(String email){
-		Query query=manager.createNativeQuery("SELECT e.nom AS entreprise_likee, p.nom, p.prenom  FROM recruteur_entreprise_join_table AS j INNER JOIN entreprises AS e ON e.id=j.entreprise_id INNER JOIN personnes AS p on p.email=j.recruteur_email WHERE p.email=? AND p.is_recruteur=0;");
+		Query query=manager.createNativeQuery("SELECT e.nom AS entreprise_likee, p.nom, p.prenom, e.id as entrepriseId, j.id as favoriteId  FROM recruteur_entreprise_join_table AS j INNER JOIN entreprises AS e ON e.id=j.entreprise_id INNER JOIN personnes AS p on p.email=j.recruteur_email WHERE p.email=? AND p.is_recruteur=0;");
 		query.setParameter(1, email);
 		List<Object[]> resultSet=query.getResultList();
 		List<EntrepriseLikee> entrepriseList=new ArrayList<EntrepriseLikee>();
 		for(Object [] row:resultSet) {
-			EntrepriseLikee entreprise=new EntrepriseLikee(row[0].toString(),row[1].toString(),row[2].toString());
+			EntrepriseLikee entreprise=new EntrepriseLikee(row[0].toString(),row[1].toString(),row[2].toString(),Integer.parseInt(row[3].toString()),Integer.parseInt(row[4].toString()));
 			entrepriseList.add(entreprise);
 		}
 		return entrepriseList;
@@ -121,16 +121,24 @@ public class PersonneService {
 		insertQuery.setParameter(2,e.getEntrepriseId());
 		insertQuery.executeUpdate();
 		//affiche l'entreprise ajoutée
-		Query displayQuery=manager.createNativeQuery("SELECT e.nom AS entreprise_likee, p.nom, p.prenom  FROM recruteur_entreprise_join_table AS j INNER JOIN entreprises AS e ON e.id=j.entreprise_id INNER JOIN personnes AS p on p.email=j.recruteur_email WHERE p.email=? AND p.is_recruteur=0;");
+		Query displayQuery=manager.createNativeQuery("SELECT e.nom AS entreprise_likee, p.nom, p.prenom, e.id AS entrepriseId, j.id AS favoriteId  FROM recruteur_entreprise_join_table AS j INNER JOIN entreprises AS e ON e.id=j.entreprise_id INNER JOIN personnes AS p on p.email=j.recruteur_email WHERE p.email=? AND p.is_recruteur=0;");
 		displayQuery.setParameter(1, email);
 		List<Object[]> resultSet=displayQuery.getResultList();
 		List<EntrepriseLikee> entrepriseList=new ArrayList<EntrepriseLikee>();
 		for(Object [] row:resultSet) {
-			EntrepriseLikee entreprise=new EntrepriseLikee(row[0].toString(),row[1].toString(),row[2].toString());
+			EntrepriseLikee entreprise=new EntrepriseLikee(row[0].toString(),row[1].toString(),row[2].toString(),Integer.parseInt(row[3].toString()),Integer.parseInt(row[4].toString()));
 			entrepriseList.add(entreprise);
 		}
 		
 		return entrepriseList;
+	}
+	//supprime une entreprise des favoris
+	public boolean deleteFavorite(int id){
+		Query query=manager.createNativeQuery("DELETE FROM recruteur_entreprise_join_table WHERE id=?;");
+		query.setParameter(1, id);
+		query.executeUpdate();
+		
+		return true;
 	}
 
 }

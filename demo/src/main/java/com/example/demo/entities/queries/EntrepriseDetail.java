@@ -9,9 +9,10 @@ public class EntrepriseDetail {
 	private String rue;
 	private String numero;
 	private String ville;
+	private long entrepriseId;
 	
 	public EntrepriseDetail(String nom, String siteWeb, String email, String cp, String rue, String numero,
-			String ville) {
+			String ville,int eId) {
 		super();
 		this.nom = nom;
 		this.siteWeb = siteWeb;
@@ -20,6 +21,7 @@ public class EntrepriseDetail {
 		this.rue = rue;
 		this.numero = numero;
 		this.ville = ville;
+		this.entrepriseId=eId;
 	}
 
 	public String getNom() {
@@ -77,7 +79,13 @@ public class EntrepriseDetail {
 	public void setVille(String ville) {
 		this.ville = ville;
 	}
+
 	
-	
+	  public long getEntrepriseId() { return entrepriseId; }
+	  
+	  public void setEntrepriseId(long entrepriseId) { 
+		  this.entrepriseId =entrepriseId;
+		  }
+	 
 
 }

@@ -20,12 +20,12 @@ public class EntreprisesService {
 	
 	public List<EntrepriseDetail> getAll() {
 	
-		Query query=entityManager.createNativeQuery("SELECT e.nom,e.site_web,e.mail, a.cp, a.rue,a.numero,v.nom AS ville FROM entreprises AS e INNER JOIN adresses AS a ON e.adresse=a.id INNER JOIN villes AS v on a.cp=v.cp;");
+		Query query=entityManager.createNativeQuery("SELECT e.nom,e.site_web,e.mail, a.cp, a.rue,a.numero,v.nom AS ville,e.id AS entrepriseId FROM entreprises AS e INNER JOIN adresses AS a ON e.adresse=a.id INNER JOIN villes AS v on a.cp=v.cp;");
 		List<Object[]> resultList=query.getResultList();
 		List<EntrepriseDetail> entreprisesList=new ArrayList();
 		for(Object[] row:resultList) {
 			 EntrepriseDetail entreprise=new EntrepriseDetail(row[0].toString(),row[1].toString(),row[2].toString(),row[3].toString(),
-			 row[4].toString(),row[5].toString(),row[6].toString());
+			 row[4].toString(),row[5].toString(),row[6].toString(),Integer.parseInt(row[7].toString()));
 			 entreprisesList.add(entreprise);
 		}
 		
@@ -34,13 +34,13 @@ public class EntreprisesService {
 	
 	public EntrepriseDetail getById(int id) {
 		EntrepriseDetail result=null;
-		Query query=entityManager.createNativeQuery("SELECT e.nom,e.site_web,e.mail, a.cp, a.rue,a.numero,v.nom AS ville FROM entreprises AS e INNER JOIN adresses AS a ON e.adresse=a.id INNER JOIN villes AS v on a.cp=v.cp WHERE e.id=?");
+		Query query=entityManager.createNativeQuery("SELECT e.nom,e.site_web,e.mail, a.cp, a.rue,a.numero,v.nom AS ville, e.id AS entrepriseId FROM entreprises AS e INNER JOIN adresses AS a ON e.adresse=a.id INNER JOIN villes AS v on a.cp=v.cp WHERE e.id=?");
 		query.setParameter(1, id);
 		List <Object[]>  resultSet=query.getResultList();
 		List <EntrepriseDetail> entrepriseList=new ArrayList<EntrepriseDetail>();
 		for(Object [] row: resultSet) {
 			EntrepriseDetail entreprise=new EntrepriseDetail(row[0].toString(),row[1].toString(),row[2].toString(),row[3].toString(),
-					 row[4].toString(),row[5].toString(),row[6].toString());
+					 row[4].toString(),row[5].toString(),row[6].toString(),Integer.parseInt(row[7].toString()));
 			entrepriseList.add(entreprise);
 		}
 		if(!entrepriseList.isEmpty()) {
