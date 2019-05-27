@@ -19,7 +19,6 @@
     <fullyQualifiedTypeName name="org.hibernate.Session"/>
     <fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
     <fullyQualifiedTypeName name="com.example.demo.dal.entities.Entreprise"/>
-    <fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
     <fullyQualifiedTypeName name="com.example.demo.dal.repositories.EntreprisesRepo"/>
     <fullyQualifiedTypeName name="com.example.demo.repositories.EntreprisesRepo"/>
     <fullyQualifiedTypeName name="com.example.demo.entities.Entreprise"/>
@@ -49,7 +48,9 @@
     <fullyQualifiedTypeName name="com.example.demo.entities.queries.Login"/>
     <fullyQualifiedTypeName name="javax.persistence.EntityManager"/>
     <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.Query"/>
-    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RestController"/>
     <fullyQualifiedTypeName name="javax.persistence.EntityNotFoundException"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="org.springframework.mail.javamail.JavaMailSender"/>
 </qualifiedTypeNameHistroy>
