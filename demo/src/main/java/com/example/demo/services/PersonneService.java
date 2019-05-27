@@ -7,6 +7,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.demo.entities.base.Personne;
@@ -19,6 +20,9 @@ public class PersonneService {
 	
 	@PersistenceContext
 	private EntityManager manager;
+	
+	@Autowired
+	EmailServiceImpl mailer;
 	
 	//Retourne la liste des technologies maîtrisées par les personnes
 //	public List <PersonneTechnologie> getAll(){
@@ -107,6 +111,7 @@ public class PersonneService {
 		query.setParameter(5, p.getPwd());
 		query.setParameter(6, p.isRecruteur());
 		query.executeUpdate();
+		this.mailer.sendRegister("f4c41f6920-92df21@inbox.mailtrap.io","Bienvenue sur StackApply, "+p.getNom()+" "+p.getPrenom()+".\n Votre email: "+p.getEmail(),"Votre inscription sur StackApply");
 		return p;
 	}
 	
