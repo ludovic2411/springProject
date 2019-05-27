@@ -11,6 +11,12 @@ public class EntrepriseDetail {
 	private String ville;
 	private long entrepriseId;
 	
+	
+	
+	public EntrepriseDetail() {
+		
+	}
+
 	public EntrepriseDetail(String nom, String siteWeb, String email, String cp, String rue, String numero,
 			String ville,int eId) {
 		super();
