@@ -5808,3 +5808,57 @@ Binding(CTRL+SHIFT+T,
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-28 14:24:12.281
 !MESSAGE executing callback sts4.classpath.dKRKGHqV SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-28 14:26:04.435
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.dKRKGHqV
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-28 14:26:04.436
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.dKRKGHqV
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-28 14:26:04.436
+!MESSAGE subsribers = null
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-28 14:26:04.436
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.dKRKGHqV => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-28 14:32:59.920
+!MESSAGE Boot LS startup time from start to initialized: 3229ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-28 14:32:59.946
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.uKDuIsOL
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-28 14:32:59.947
+!MESSAGE subscribing to classpath changes: sts4.classpath.uKDuIsOL
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-28 14:32:59.947
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-28 14:32:59.947
+!MESSAGE subsribers = [sts4.classpath.uKDuIsOL]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-28 14:32:59.948
+!MESSAGE Sending initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-28 14:32:59.948
+!MESSAGE project demo ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-28 14:32:59.949
+!MESSAGE Preparing classpath changed notification demo
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-28 14:32:59.949
+!MESSAGE Sending initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-28 14:32:59.949
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-28 14:32:59.950
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.uKDuIsOL => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-28 14:32:59.951
+!MESSAGE classpath=96 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-28 14:32:59.952
+!MESSAGE executing callback sts4.classpath.uKDuIsOL demo false 96
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-05-28 14:33:00.000
+!MESSAGE executing callback sts4.classpath.uKDuIsOL SUCCESS [done]
