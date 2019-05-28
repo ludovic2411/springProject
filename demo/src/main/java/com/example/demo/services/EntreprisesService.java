@@ -31,6 +31,18 @@ public class EntreprisesService {
 		return exist;
 	}
 	
+	public long getLastAdresseId() {
+		Query query=entityManager.createNativeQuery("SELECT MAX(id) FROM adresses");
+		long previousId=Long.parseLong(query.getSingleResult().toString());
+		return previousId;
+	}
+	
+	public long getLastEntrepriseId() {
+		Query countE=entityManager.createNativeQuery("SELECT MAX(id) FROM entreprises");
+		long previousEntId=Long.parseLong(countE.getSingleResult().toString());
+		return previousEntId;
+	}
+	
 	public List<EntrepriseDetail> getAll() {
 	
 		Query query=entityManager.createNativeQuery("SELECT e.nom,e.site_web,e.mail, a.cp, a.rue,a.numero,v.nom AS ville,e.id AS entrepriseId FROM entreprises AS e INNER JOIN adresses AS a ON e.adresse=a.id INNER JOIN villes AS v on a.cp=v.cp;");
@@ -84,11 +96,9 @@ public class EntreprisesService {
 		System.out.println(this.checkVille(e.getCp()));
 		//System.out.println(e);
 		//Calcul de l'id des adresses
-		Query query=entityManager.createNativeQuery("SELECT COUNT(*) FROM adresses");
-		long previousId=Long.parseLong(query.getSingleResult().toString());
+		long previousId=this.getLastAdresseId();
 		//Calcul de l'id de l'entreprise
-		Query countE=entityManager.createNativeQuery("SELECT COUNT(*) FROM entreprises");
-		long previousEntId=Long.parseLong(countE.getSingleResult().toString());
+		long previousEntId=this.getLastEntrepriseId();
 		//insertion de la ville
 		if(!this.checkVille(e.getCp())) {
 			Query createVille=entityManager.createNativeQuery("INSERT INTO villes(cp,nom,pays) VALUES (?,?,?);");
